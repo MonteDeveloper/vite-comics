@@ -5,11 +5,6 @@ export default {
     props: {
         infolist: Array
     },
-    data() {
-        return {
-            activeNavEl: 0
-        }
-    },
     mounted() {
         console.log("Caricato il componente 'InfolistBar'.");
     }
@@ -28,7 +23,7 @@ export default {
 <style scoped>
 div {
     color: white;
-    height: 200px;
+    height: 180px;
 }
 
 h2{

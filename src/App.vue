@@ -1,11 +1,13 @@
 <script>
 import LogoNavbar from './components/LogoNavbar.vue'
 import InfolistBar from './components/InfolistBar.vue'
+import ColumnFooterWithBgAndLogo from './components/ColumnFooterWithBgAndLogo.vue'
 
 export default {
   components: {
     LogoNavbar,
-    InfolistBar
+    InfolistBar,
+    ColumnFooterWithBgAndLogo
   },
   data() {
     return {
@@ -42,6 +44,55 @@ export default {
           name: "DC POWER VISA",
           imgFile: "buy-dc-power-visa.svg"
         }
+      ],
+      columnsFooter: [
+        [
+          {
+            title: "DC COMICS",
+            links: [
+              "Characters",
+              "Comics",
+              "Movies",
+              "TV",
+              "Games",
+              "Videos",
+              "News"
+            ]
+          },
+          {
+            title: "SHOP",
+            links: [
+              "Shop DC",
+              "Shop DC Collectibles"
+            ]
+          }
+        ],
+        {
+          title: "DC",
+          links: [
+            "Terms Of Use",
+            "Privacy Policy (New)",
+            "Ad Choices",
+            "Advertising",
+            "Jobs",
+            "Subscriptions",
+            "Talent Workshops",
+            "CPSC Certificates",
+            "Ratings",
+            "Shop Help",
+            "Contact Us"
+          ]
+        },
+        {
+          title: "SITES",
+          links: [
+            "DC",
+            "MAD Magazine",
+            "DC Kids",
+            "DC Universe",
+            "DC Power Visa"
+          ]
+        }
       ]
     }
   },
@@ -77,8 +128,7 @@ export default {
       </div>
     </div>
     <div class="botBox">
-      <div class="container">
-      </div>
+      <ColumnFooterWithBgAndLogo :columns="columnsFooter" bgImg="./src/assets/img/footer-bg.jpg" logoImg="./src/assets/img/dc-logo-bg.png"/>
     </div>
   </footer>
 
