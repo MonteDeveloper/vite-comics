@@ -4,7 +4,7 @@ export default {
     name: "LogoNavbar",
     props: {
         logoPath: String,
-        navElements: String
+        navElements: Array
     },
     data() {
         return {
@@ -21,7 +21,7 @@ export default {
     <div class="d-flex justify-content-between align-items-center">
         <img :src="logoPath" alt="LOGO">
         <ul class="d-flex gap-4 p-0 m-0">
-            <li class="d-flex align-items-center" :class="index == activeNavEl ? 'activeNavEl' : ''" v-for="(li, index) in navElements.split(',')" @click="activeNavEl = index">
+            <li class="d-flex align-items-center" :class="index == activeNavEl ? 'activeNavEl' : ''" v-for="(li, index) in navElements" @click="activeNavEl = index">
                 {{ li.trim() }}
             </li>
         </ul>
