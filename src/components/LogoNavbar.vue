@@ -8,7 +8,7 @@ export default {
     },
     data() {
         return {
-            activeNavEl: 0
+            activeNavEl: 1
         }
     },
     mounted() {
